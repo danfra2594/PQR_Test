@@ -1,0 +1,8 @@
+{
+    "/dev/PQR/api/v1/*": {
+        "target": "https://2a80rap084.execute-api.us-east-2.amazonaws.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
