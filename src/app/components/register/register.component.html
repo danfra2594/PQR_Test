@@ -1,0 +1,55 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-10" style="background-color:#e0e0e0; padding: 20px;">
+            <h2>Registrar caso</h2>
+            <label style="color: red;">* Campos obligatorios</label>
+            <div>
+                <div class="mt-2">
+                    <label for="listaOpciones" class="form-label">Tipo caso: *</label>
+                    <select [(ngModel)]="opcion" class="form-select">
+                        <option [value]="item" *ngFor="let item of listaOpciones">{{item}}</option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <label for="identifaicion" class="form-label">Número identifiación: *</label>
+                    <input type="number" [(ngModel)]="numeroidentifiacion" class="form-control" placeholder="Ingrese su número de identificación">
+                </div>
+                <div class="mt-2">
+                    <label for="nombre" class="form-label">Nombre completo: *</label>
+                    <input type="text" [(ngModel)]="nombre" class="form-control" placeholder="Ingrese su nombre completo">
+                </div>
+                <div class="mt-2">
+                    <label for="direccion" class="form-label">Dirección: *</label>
+                    <input type="text" [(ngModel)]="direccion" class="form-control" placeholder="Ingrese su Dirección">
+                </div>
+                <div class="mt-2">
+                    <label for="telefono" class="form-label">Teléfono: *</label>
+                    <input type="text" [(ngModel)]="telefono" class="form-control" placeholder="Ingrese su número de teléfono">
+                </div>
+                <div class="mt-2">
+                    <label for="email" class="form-label">Email: *</label>
+                    <input type="email" [(ngModel)]="email" class="form-control" placeholder="Ingrese su email">
+                </div>
+                <div class="mt-3">
+                    <label for="detallecaso" class="form-label">Detalles: *</label>
+                    <div class="input-group">
+                        <textarea rows="5" [(ngModel)]="mensaje" placeholder="Detalle el caso de su solicitud no mas de 500 palabras" class="form-control" maxlength="500" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" (click)="registrar()" type="button">Enviar</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-danger" routerLink="['/home']" type="button">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
