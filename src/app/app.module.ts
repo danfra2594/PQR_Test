@@ -14,6 +14,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegistercasoService } from './services/registercaso.service';
 import { ModalmensajeComponent } from './modal/modalmensaje/modalmensaje.component';
 import { ModalconfirmacionComponent } from './modal/modalconfirmacion/modalconfirmacion.component';
+import { AdminregisterComponent } from './components/adminregister/adminregister.component';
+import { ModalprocesoComponent } from './modal/modalproceso/modalproceso.component';
+import { UserregisterComponent } from './components/userregister/userregister.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ModalconfirmacionComponent } from './modal/modalconfirmacion/modalconfi
     NavbarComponent,
     RegisterComponent,
     ModalmensajeComponent,
-    ModalconfirmacionComponent
+    ModalconfirmacionComponent,
+    AdminregisterComponent,
+    ModalprocesoComponent,
+    UserregisterComponent
   ],
   imports: [
     BrowserModule,

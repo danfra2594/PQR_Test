@@ -7,6 +7,7 @@ export class Caso {
     public Telefono: string;
     public Email: string;
     public Mensaje: string;
+    public Fecha: string;
 
     constructor(id, caso, identificacion, nombre, direccion, telefono, email, mensaje) {
         this.Id = id;

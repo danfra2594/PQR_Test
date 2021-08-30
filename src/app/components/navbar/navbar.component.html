@@ -17,7 +17,7 @@
             </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" [routerLink]="['/register']">Registrar solicitud</a></li>
-                        <li><a class="dropdown-item" href="#">Consultar solicitud</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/user']">Consultar solicitud</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -25,8 +25,7 @@
                         Área Administrativa
             </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Registrar solicitud</a></li>
-                        <li><a class="dropdown-item" href="#">Consultar solicitud</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/admin']">Administrar casos</a></li>
                     </ul>
                 </li>
             </ul>

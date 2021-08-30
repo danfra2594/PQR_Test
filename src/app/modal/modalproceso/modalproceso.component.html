@@ -1,0 +1,66 @@
+<mat-dialog-content>
+    <div>
+        <h2>Información del caso registrado</h2>
+        <div class="row justify-content-md-center">
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Id: {{ data.item.id }}</label>
+            </div>
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Documento: {{ data.item.identificacion }}</label>
+            </div>
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Nombre: {{ data.item.nombre }}</label>
+            </div>
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Direccion: {{ data.item.direccion }}</label>
+            </div>
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Telefono: {{ data.item.telefono }}</label>
+            </div>
+            <div class="col-4 col-xs-6">
+                <label class="class=" form-label> Email: {{ data.item.email }}</label>
+            </div>
+            <div class="col-12 col-xs-12">
+                <label class="class=" form-label> Detalle: {{ data.item.mensaje }}</label>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="mt-4">
+        <h2>Respuesta del área administrativa</h2>
+        <div class="row justify-content-md-center">
+            <div class="col-12">
+                <label for="detallecaso" class="form-label">Detalle de la respuesta: *</label>
+                <div class="input-group">
+                    <textarea rows="5" [attr.disabled]="areaAdmin ? '' : null" [(ngModel)]="respuestaAdmin" placeholder="Detalle de la respuesta al caso no mas de 500 palabras" class="form-control" maxlength="500" aria-label="With textarea"></textarea>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <button [class.disabled]="areaAdmin" class="btn btn-success" (click)="registrarRespuestaAdmin()" type="button">Guardar respuesta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="mt-4">
+        <h2>Respuesta del usuario</h2>
+        <div class="row justify-content-md-center">
+            <div class="col-12">
+                <label for="detallecaso" class="form-label">Detalle de la respuesta: *</label>
+                <div class="input-group">
+                    <textarea rows="5" [attr.disabled]="areaUser ? '' : null" [(ngModel)]="respuestaUser" placeholder="Detalle de la respuesta al caso no mas de 500 palabras" class="form-control" maxlength="500" aria-label="With textarea"></textarea>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <button [class.disabled]="areaUser" class="btn btn-info" (click)="registrarRespuestaUser()" type="button">Guardar respuesta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
