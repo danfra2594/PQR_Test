@@ -73,8 +73,10 @@ export class ModalprocesoComponent  {
       if(itemRespAdmin != null){
         this.respuestaAdmin = itemRespAdmin.mensaje;
         this.areaAdmin = true;
-      }else
+      }else {
+        this.areaUser = true;
         this.toastr.warning('No hay respuesta del administrador aún', 'Info');
+      }
 
       let itemRespUser = this.lstResp.filter(x => x.idRegister == this.data.item.id 
         && x.respuestaUser == true)[0];
